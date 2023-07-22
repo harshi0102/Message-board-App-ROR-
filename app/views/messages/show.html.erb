@@ -1,5 +1,5 @@
 <h2><%= @message.title %></h2>
-<p><%=@message.description %></p>
-
-<%=link_to "Edit",edit_message_path(@message) %>
-
+<p><%= @message.description %></p>
+<%= link_to "Back", root_path %>
+<%= link_to "Edit", edit_message_path(@message) %>
+<%= link_to "Delete Message", message_path(@message), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default" %>
